@@ -10,7 +10,7 @@ myApp.controller("myController", function ($scope) {
         lastName: 'Thompson',
         gender: 'Male'
     };
-    $scope.message = 'Hello World! ';
+    //$scope.message = 'Hello World! ';
     $scope.employee = employee;
     var country = {
         name: "USA",
@@ -18,4 +18,6 @@ myApp.controller("myController", function ($scope) {
         flag: "/Images/Klay-Thompson-2.jpg"
     };
     $scope.country = country;
+    $scope.message = "Two way data binding!";
+    $scope.greeting = "Hello Angular!"
 });
