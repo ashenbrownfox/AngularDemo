@@ -3,9 +3,13 @@
 //create the Module
 var myApp = angular.module("myModule", []);
 
-//create the controller
-var myController = function($scope) {
-$scope.message = "AngularJS Tutorial";
-}
-//register controller with odel
-myApp.controller("myController", myController);
+//register controller with model
+myApp.controller("myController", function ($scope) {
+    var employee = {
+        firstName: 'LeBron',
+        lastName: 'James',
+        gender: 'Male'
+    };
+    $scope.message = 'Hello World! ';
+    $scope.employee = employee;
+});

@@ -1,25 +1,33 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title><AngularTest</title>
+    <title>AngularTest</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="Scripts/Script.js"></script>
 </head>
-<body>
+<body ng-app="myModule">
     <div ng-controller="myController">
         {{ message }}
-    </div>
-    <div ng-app>
-        Hello World = {{ 10 + 20 }} 
-        <br/>
-        {{['Steph', 'LeBron', 'Kevin'][0]}} 
-        <br/>
+
+
+        10 + 20= {{ 10 + 20 }}
+        <br />
+        {{['Steph', 'LeBron', 'Kevin'][0]}}
+        <br />
         {{ {name:'Steph', age: 18}.age }}
-        <br/>
+        <br />
         20+30 = {{20+30}}
-        <br/>
+        <br />
         Boolean Angular Expression. Am I hungry? {{1==1}}
-        Quick BrownFox
+        <div>
+            First Name : {{employee.firstName}}
+        </div>
+        <div>
+            Last Name : {{employee.lastName}}
+        </div>
+        <div>
+            Gender : {{employee.gender}}
+        </div>
     </div>
 </body>
 </html>
