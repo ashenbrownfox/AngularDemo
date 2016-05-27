@@ -6,10 +6,16 @@ var myApp = angular.module("myModule", []);
 //register controller with model
 myApp.controller("myController", function ($scope) {
     var employee = {
-        firstName: 'LeBron',
-        lastName: 'James',
+        firstName: 'Klay',
+        lastName: 'Thompson',
         gender: 'Male'
     };
     $scope.message = 'Hello World! ';
     $scope.employee = employee;
+    var country = {
+        name: "USA",
+        capital: "D.C",
+        flag: "/Images/Klay-Thompson-2.jpg"
+    };
+    $scope.country = country;
 });
