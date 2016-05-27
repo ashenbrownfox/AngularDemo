@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\styles.css" />
     <Content Include="Images\Klay-Thompson-2.jpg" />
     <Content Include="Index.html" />
     <Content Include="Scripts\angular.min.js" />
