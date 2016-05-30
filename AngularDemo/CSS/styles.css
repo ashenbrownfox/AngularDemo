@@ -1,0 +1,18 @@
+﻿body {
+}
+
+table{
+    border: solid black 1px;
+    padding-right:10px;
+    font-family:Arial;
+}
+th{
+    text-align = left;
+    padding: 10px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+}
+td{
+    padding: 10px;
+    border: solid black 1px;
+}

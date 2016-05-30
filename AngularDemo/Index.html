@@ -14,6 +14,16 @@
         <br/><br />
         {{greeting}}
         <br/> 
+        Rows to Display <input type="number" step="1" min="0" max="7" ng-model="rowLimit" />
+        <br/>
+        Order By: 
+        <select ng-model="sortColumn">
+        <option value="fname">First Name</option>
+            <option value="lname">Last Name</option>
+            <option value="dob">Date of Birth</option>
+            <option value="salary">Salary DESC</option>
+        </select>
+
         <table id="employeetable">
             <thead>
                 <th>First Name</th>
@@ -25,11 +35,11 @@
                 <th>Like Or Dislike</th>
             </th>
             <tbody>
-                <tr ng-repeat="employee in employees">
-                    <td>{{employee.firstName}}</td>
+                <tr ng-repeat="employee in employees | limitTo:rowLimit | orderBy: sortColumn">
+                    <td>{{employee.firstName | uppercase}}</td>
                     <td>{{employee.lastName}}</td>
                     <td>{{employee.gender}}</td>
-                    <td>{{employee.salary}}</td>
+                    <td>{{employee.salary | currency}}</td>
                     <td>{{employee.likes}}</td>
                     <td>{{employee.dislikes}}</td>
                     <td>
@@ -38,6 +48,10 @@
                     </td>
                 </tr>
             </tbody>
+        </table>
+
+        <table>
+
         </table>
         <br/>
         <table>
@@ -89,6 +103,13 @@
         20+30 = {{20+30}}
         <br />
         Boolean Angular Expression. Am I hungry? {{1==1}}
+        <p>Use ng-model to bind a textfield textarea to a model.</p>
+        <p>
+            Use the ng-repeat directive to loop through an array. Think of it as a ForEach Loop. ng-repeat="employee in employees"
+        </p>
+        <p>
+            Use ng-click to handle events. Call the method. e.g. ng-click="incrementLikes(employee)
+        </p>
     </div>
 </body>
 </html>
