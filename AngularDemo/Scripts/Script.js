@@ -36,6 +36,18 @@ myApp.controller("myController", function ($scope) {
     $scope.country = country;
     $scope.rowLimit = 10;
     $scope.sortColumn = "salary";
+
+    $scope.reverseSort = false;
+    $scope.sortData = function () {
+        $scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false
+        $scope.sortColumn = column;
+    }
+    $scope.getSortClass = function (column) {
+        if ($scope.sortColumn == column) {
+            return $scope.reverseSort ? 'arrow-down' : 'arrow-up'
+        }
+        return '';
+    }
     $scope.message = "Two way data binding!";
     $scope.greeting = "Hello Angular!"
 });
