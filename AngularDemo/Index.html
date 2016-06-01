@@ -13,13 +13,14 @@
         <input type="text" ng-model="greeting" />
         <br/><br/>
         {{ message }}
-        <br/><br />
+        <br/>
         {{greeting}}
-        <br/> 
+        <br/> <br/>
         Rows to Display <input type="number" step="1" min="0" max="10" ng-model="rowLimit" />
         <br/>
         
-
+        Search By: <input type="text" placeholder="Search Employees" ng-model="searchText.lastName" />
+        <br/><br/>
         <table id="employeetable">
             <thead>
                 <tr>
@@ -44,7 +45,7 @@
                 </tr>           
             </thead>
             <tbody>
-                <tr ng-repeat="employee in employees | limitTo:rowLimit | orderBy: sortColumn:reverseSort">
+                <tr ng-repeat="employee in employees | limitTo:rowLimit | orderBy: sortColumn:reverseSort | filter: searchText">
                     <td>{{employee.firstName | uppercase}}</td>
                     <td>{{employee.lastName}}</td>
                     <td>{{employee.dob | date :"MM/dd/yyyy"}}</td>
