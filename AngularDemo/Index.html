@@ -18,8 +18,11 @@
         <br/> <br/>
         Rows to Display <input type="number" step="1" min="0" max="10" ng-model="rowLimit" />
         <br/>
-        
-        Search By: <input type="text" placeholder="Search Employees" ng-model="searchText.lastName" />
+        Click Column Header to Sort
+        <br/>
+        <input type="text" placeholder="Search by First Name" ng-model="searchText.firstName" />
+        <input type="text" placeholder="Search By Last Name" ng-model="searchText.lastName" />
+        <input type="checkbox" ng-model="exactMatch"/> Exact Match
         <br/><br/>
         <table id="employeetable">
             <thead>
@@ -45,7 +48,7 @@
                 </tr>           
             </thead>
             <tbody>
-                <tr ng-repeat="employee in employees | limitTo:rowLimit | orderBy: sortColumn:reverseSort | filter: searchText">
+                <tr ng-repeat="employee in employees | limitTo:rowLimit | orderBy: sortColumn:reverseSort | filter: searchText:exactMatch">
                     <td>{{employee.firstName | uppercase}}</td>
                     <td>{{employee.lastName}}</td>
                     <td>{{employee.dob | date :"MM/dd/yyyy"}}</td>
