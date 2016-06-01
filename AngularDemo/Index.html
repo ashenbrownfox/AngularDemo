@@ -20,9 +20,7 @@
         <br/>
         Click Column Header to Sort
         <br/>
-        <input type="text" placeholder="Search by First Name" ng-model="searchText.firstName" />
-        <input type="text" placeholder="Search By Last Name" ng-model="searchText.lastName" />
-        <input type="checkbox" ng-model="exactMatch"/> Exact Match
+        <input type="text" placeholder="Search by First or Last Name" ng-model="searchText" />
         <br/><br/>
         <table id="employeetable">
             <thead>
@@ -48,7 +46,7 @@
                 </tr>           
             </thead>
             <tbody>
-                <tr ng-repeat="employee in employees | limitTo:rowLimit | orderBy: sortColumn:reverseSort | filter: searchText:exactMatch">
+                <tr ng-repeat="employee in employees | limitTo:rowLimit | orderBy: sortColumn:reverseSort | filter: searchText">
                     <td>{{employee.firstName | uppercase}}</td>
                     <td>{{employee.lastName}}</td>
                     <td>{{employee.dob | date :"MM/dd/yyyy"}}</td>

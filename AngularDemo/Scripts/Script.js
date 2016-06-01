@@ -45,6 +45,19 @@ myApp.controller("myController", function ($scope) {
         }
         return '';
     }
+
+    $scope.search = function (item) {
+        if ($scope.searchText == undefined) {
+            return false;
+        }
+        else {
+            if (item.firstName.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1 ||
+                item.lastName.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1) {
+                return true;
+            }
+        }
+        return false;
+    }
     $scope.message = "Two way data binding!";
     $scope.greeting = "Hello Angular!"
 });
