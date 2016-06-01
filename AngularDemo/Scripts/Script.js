@@ -26,23 +26,20 @@ myApp.controller("myController", function ($scope) {
         { firstName: "Steven", lastName: "Adams", dob: new Date("July 20, 1993"), gender: "Male", salary: 38000, likes: 0, dislikes: 0 }
     ];
     $scope.employees = employees;
-    $scope.incrementLikes = function(employees) {
-        employees.likes++;
-    };
-    $scope.incrementDislikes = function (employees) {
-        employees.dislikes++;
-    };
+    $scope.incrementLikes = function(employees) {employees.likes++;};
+    $scope.incrementDislikes = function (employees) { employees.dislikes++; };
     $scope.player = player;
     $scope.country = country;
     $scope.rowLimit = 10;
-    $scope.sortColumn = "salary";
 
+    $scope.sortColumn = "firstName";
     $scope.reverseSort = false;
-    $scope.sortData = function () {
+
+    $scope.sortData = function(column) {
         $scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false
         $scope.sortColumn = column;
     }
-    $scope.getSortClass = function (column) {
+    $scope.getSortClass = function(column) {
         if ($scope.sortColumn == column) {
             return $scope.reverseSort ? 'arrow-down' : 'arrow-up'
         }
