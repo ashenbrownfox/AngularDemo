@@ -58,6 +58,7 @@ myApp.controller("myController", function ($scope) {
         }
         return false;
     }
+    $scope.employeeView = "Views/StaticPage.html";
     $scope.message = "Two way data binding!";
     $scope.greeting = "Hello Angular!"
 });

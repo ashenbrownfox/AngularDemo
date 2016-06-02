@@ -4,6 +4,23 @@
     <title></title>
 </head>
 <body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="employee in employees">
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.salary}}</td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
