@@ -61,4 +61,10 @@ myApp.controller("myController", function ($scope) {
     $scope.employeeView = "Views/StaticPage.html";
     $scope.message = "Two way data binding!";
     $scope.greeting = "Hello Angular!"
+
+    //$http.get("EmployeeWebService.asmx.cs/GetAllEmployees")
+    //             .then(function (response) {
+    //                 $scope.employees = response.data;
+    //             });
+
 });

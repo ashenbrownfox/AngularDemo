@@ -57,7 +57,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\initialCreationofDB.sql" />
+    <Content Include="App_Data\selectionTest.sql" />
+    <Content Include="App_Data\TestDataBase.mdf" />
+    <Content Include="App_Data\TestDataBase_log.ldf">
+      <DependentUpon>TestDataBase.mdf</DependentUpon>
+    </Content>
     <Content Include="CSS\styles.css" />
+    <Content Include="EmployeeWebService.asmx" />
     <Content Include="Images\Klay-Thompson-2.jpg" />
     <Content Include="Index.html" />
     <Content Include="Scripts\angular.min.js" />
@@ -67,6 +74,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeWebService.asmx.cs">
+      <DependentUpon>EmployeeWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
