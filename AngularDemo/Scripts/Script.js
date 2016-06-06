@@ -1,5 +1,4 @@
 ﻿/// <reference path="angular.min.js" />
-
 //create the Module
 var myApp = angular.module("myModule", []);
 
