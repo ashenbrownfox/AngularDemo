@@ -21,7 +21,7 @@ namespace AngularDemo
     {
 
         [WebMethod]
-        public string GetAllEmployees()
+        public void GetAllEmployees()
         {
             List<Employee> listEmployees = new List<Employee>();
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
@@ -34,7 +34,7 @@ namespace AngularDemo
                 while (rdr.Read())
                 {
                     Employee employee = new Employee();
-                    employee.id = Convert.ToInt32(rdr["Id"]);
+                    employee.id = Convert.ToInt32(rdr["id"]);
                     employee.firstName = rdr["firstName"].ToString();
                     employee.lastName = rdr["lastName"].ToString();
                     employee.gender = rdr["Gender"].ToString();
@@ -45,7 +45,6 @@ namespace AngularDemo
 
             JavaScriptSerializer js = new JavaScriptSerializer();
             Context.Response.Write(js.Serialize(listEmployees));
-            return "Hello World";
         }
     }
 }

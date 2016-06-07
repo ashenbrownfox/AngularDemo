@@ -3,7 +3,7 @@
 var myApp = angular.module("myModule", []);
 
 //register controller with model
-myApp.controller("myController", function ($scope) {
+myApp.controller("myController", function ($scope, $http) {
     var player = {
         firstName: 'Klay',
         lastName: 'Thompson',
@@ -61,9 +61,9 @@ myApp.controller("myController", function ($scope) {
     $scope.message = "Two way data binding!";
     $scope.greeting = "Hello Angular!"
 
-    //$http.get("EmployeeWebService.asmx.cs/GetAllEmployees")
-    //             .then(function (response) {
-    //                 $scope.employees = response.data;
-    //             });
+    $http.get("EmployeeWebService.asmx/GetAllEmployees")
+                 .then(function (response) {
+                     $scope.employees = response.data;
+                 });
 
 });
