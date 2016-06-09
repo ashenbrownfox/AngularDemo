@@ -72,9 +72,10 @@
     <Content Include="Bootstrap\js\bootstrap.js" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Bootstrap\js\npm.js" />
+    <Content Include="Scripts\angular.route.js" />
     <Content Include="Scripts\script2.js" />
     <Content Include="Scripts\StringService.js" />
-    <Content Include="Views\BootTest.html" />
+    <Content Include="BootTest.html" />
     <Content Include="CSS\styles.css" />
     <Content Include="EmployeeWebService.asmx" />
     <Content Include="Images\Klay-Thompson-2.jpg" />

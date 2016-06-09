@@ -18,7 +18,13 @@
     <button id="top" ng-click="scrollTo('bottom')">
         Go to bottom of the page
     </button>
+    <span ng-repeat="country in countries">
+        <button ng-click="scrollTo(country.Name)">{{country.Name}}</button>
+    </span>
+    <br />
     <br /><br />
+
+
     <div>
         <b>What is AngularJS</b>
         <br />
