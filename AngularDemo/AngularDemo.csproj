@@ -72,6 +72,12 @@
     <Content Include="Bootstrap\js\bootstrap.js" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Bootstrap\js\npm.js" />
+    <Content Include="Images\Heroescome.jpg" />
+    <Content Include="Images\lenovo1.jpg" />
+    <Content Include="Images\lenovo2.jpg" />
+    <Content Include="Images\lenovo3.jpg" />
+    <Content Include="Images\lenovo4.jpg" />
+    <Content Include="Images\lenovo5.jpg" />
     <Content Include="Scripts\angular.route.js" />
     <Content Include="Scripts\script2.js" />
     <Content Include="Scripts\StringService.js" />
