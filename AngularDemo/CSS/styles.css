@@ -43,3 +43,9 @@ td{
     text-align: center;
     font-size: large;
 }
+
+.wallpaperPreview{
+    width:  300px;
+    height: 150px;
+    background-position: 50% 50%;
+}
