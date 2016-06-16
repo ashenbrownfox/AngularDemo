@@ -66,6 +66,7 @@
     </Content>
     <Content Include="bootexperiment\buttonicons.html" />
     <Content Include="bootexperiment\codeblocks.html" />
+    <Content Include="bootexperiment\dropdown.html" />
     <Content Include="bootexperiment\tablestyling.html" />
     <Content Include="Bootstrap\css\bootstrap-theme.css" />
     <Content Include="Bootstrap\css\bootstrap-theme.min.css" />
@@ -84,7 +85,7 @@
     <Content Include="Scripts\angular.route.js" />
     <Content Include="Scripts\anchorscroll.js" />
     <Content Include="Scripts\StringService.js" />
-    <Content Include="BootTest.html" />
+    <Content Include="bootexperiment\BootTest.html" />
     <Content Include="CSS\styles.css" />
     <Content Include="EmployeeWebService.asmx" />
     <Content Include="Images\Klay-Thompson-2.jpg" />
