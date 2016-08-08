@@ -17,4 +17,22 @@
 5. Many more benefits like controlling the behaviour of DOM elements using directives and the flexibility that angular filters provide.
 
 
+##Getting started with AngularJS
+To build angular applications you only need one script file and that is angular.js.
+To get started with angular
+1. Add a reference to the angular script
+2. Include ng-app attribute 
+
+##What is ng-app 
+In angular, ng-app is called a directive. There are many directives in angular. You can find the complete list of directives on https://angularjs.org. The ng prefix in the directive stands for angular. The ng-app directive is a starting point of AngularJS Application. Angular framework will first check for ng-app directive in an HTML page after the entire page is loaded. If ng-app directive is found, angular bootstraps itself and starts to manage the section of the page that has the ng-app directive. 
+
+So the obvious next question is, where to place the ng-app directive on the page
+It should be placed at the root of the HTML document, that is at the [html] tag level or at the [body] tag level, so that angular can control the entire page. 
+
+However, there is nothing stopping you from placing it on any other HTML element with in the page. When you do this only that element and it's children are managed by angular. 
+
+Example: All the following are valid expressions in angular
+{{ 1 == 1 }} - Evaluates to true
+{{ { name: 'David', age : '30' }.name }} - Returns the name property value
+{{ ['Mark', 'David', 'Sara'][2] }} - Returns the 2nd element from the array  
 
